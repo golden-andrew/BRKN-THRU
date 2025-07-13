@@ -34,16 +34,17 @@
 /* Base */
 * { box-sizing: border-box; }
 body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); background: var(--bg); }
-.container { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.container { max-width: 1200px; margin: 0; padding: 16px; }
 .hidden { display: none; }
 
 /* Hero */
 .hero {
+  min-height: 100svh;
   min-height: 100vh;
   position: relative;
-  height: 100vh;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -85,7 +86,6 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; co
   z-index: 2;
   width: 100%;
   padding: 32px 0;
-  margin-top: 20px;
 }
 
 main { z-index: 3; position: relative; }
@@ -614,11 +614,6 @@ footer p {
 @media (max-width: 768px) {
   .break-cards {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
-  }
-  
-  .countdown {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
   }
   
   .checklist-item {
