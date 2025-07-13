@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRKN THRU - You Made It</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Welcome <span id="breaker-name">Champion</span>,<br>You Made It</h1>
+                <p class="hero-subtitle">You've been selected for the most exclusive youth breaking tournament in the world</p>
+                <div class="series-logo">
+                    <img src="assets/logo.svg" alt="BRKN THRU Logo" />
+                </div>
+                
+                <div class="countdown-box">
+                    <h2>Submission Deadline</h2>
+                    <div class="countdown" id="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                    <p class="countdown-date">Friday, July 18, 2025 • 11:59 PM PST</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="break-system">
+            <div class="container">
+                <h2 class="section-title">The BREAK System</h2>
+                <p class="section-subtitle">You'll be judged using our revolutionary 5-criteria system</p>
+                
+                <div class="break-cards">
+                    <div class="break-card">
+                        <div class="card-header">
+                            <h3>Basics</h3>
+                            <span class="card-letter">B</span>
+                        </div>
+                        <p>Foundation and technique: Toprock, Footwork, Freezes</p>
+                    </div>
+                    
+                    <div class="break-card">
+                        <div class="card-header">
+                            <h3>Risk</h3>
+                            <span class="card-letter">R</span>
+                        </div>
+                        <p>Difficulty and power: Power moves, Difficulty, Dynamics</p>
+                    </div>
+                    
+                    <div class="break-card">
+                        <div class="card-header">
+                            <h3>Execution</h3>
+                            <span class="card-letter">E</span>
+                        </div>
+                        <p>Cleanliness and control: Control, Cleanliness, Mistakes</p>
+                    </div>
+                    
+                    <div class="break-card">
+                        <div class="card-header">
+                            <h3>Artistry</h3>
+                            <span class="card-letter">A</span>
+                        </div>
+                        <p>Creativity and musicality: Musicality, Originality, Concepts</p>
+                    </div>
+                    
+                    <div class="break-card">
+                        <div class="card-header">
+                            <h3>Knockout</h3>
+                            <span class="card-letter">K</span>
+                        </div>
+                        <p>Battle strategy and intensity: Attack, Intensity, Strategy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="checklist">
+            <div class="container">
+                <h2 class="section-title">Submission Checklist</h2>
+                <p class="section-subtitle">Complete these steps to secure your spot</p>
+                
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <div class="check-content">
+                            <input type="checkbox" id="step1" class="check-box">
+                            <div class="check-info">
+                                <label for="step1">Download and review the BREAK system explainer</label>
+                                <p class="check-desc">Complete guide to our judging criteria</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" data-file="break-explainer.pdf">Download PDF</button>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="check-content">
+                            <input type="checkbox" id="step2" class="check-box">
+                            <div class="check-info">
+                                <label for="step2">Complete and sign the talent release form</label>
+                                <p class="check-desc">Required for participation</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" data-file="talent-release.pdf">Download PDF</button>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="check-content">
+                            <input type="checkbox" id="step3" class="check-box">
+                            <div class="check-info">
+                                <label for="step3">Complete and sign the liability waiver</label>
+                                <p class="check-desc">Safety and legal requirements</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" data-file="liability-waiver.pdf">Download PDF</button>
+                    </div>
+                    
+                    <div class="checklist-item upload-item">
+                        <div class="check-content">
+                            <input type="checkbox" id="step4" class="check-box">
+                            <div class="check-info">
+                                <label for="step4">Upload all signed forms before deadline</label>
+                                <p class="check-desc">Submit your completed documents</p>
+                            </div>
+                        </div>
+                        <div class="upload-area" id="upload-area">
+                            <div class="upload-icon">📁</div>
+                            <h3>Drag & Drop Files Here</h3>
+                            <p>or <span class="upload-link">click to browse</span></p>
+                            <p class="upload-formats">Accepts PDF, JPG, PNG files</p>
+                            <input type="file" id="file-input" multiple accept=".pdf,.jpg,.jpeg,.png" class="hidden">
+                        </div>
+                        
+                        <div class="upload-progress hidden" id="upload-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <p id="progress-text">Uploading...</p>
+                        </div>
+                        
+                        <div class="upload-files" id="upload-files"></div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="check-content">
+                            <input type="checkbox" id="step5" class="check-box">
+                            <div class="check-info">
+                                <label for="step5">Confirm submission receipt</label>
+                                <p class="check-desc">Verify your forms were received</p>
+                            </div>
+                        </div>
+                        <div class="status-indicator" id="status-indicator">
+                            <span class="status status-info">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="confirmation hidden" id="confirmation-section">
+            <div class="container">
+                <div class="confirmation-icon">✅</div>
+                <h2>Submission Received!</h2>
+                <p>Your forms have been successfully uploaded. You'll receive a confirmation email shortly.</p>
+                <p>Questions? Contact us at <a href="mailto:hello@brkn-thru.com">hello@brkn-thru.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Golden AGE Media Entertainment</div>
+            <p>© 2025 Golden AGE Media Entertainment. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
