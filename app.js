@@ -70,7 +70,7 @@ window.addEventListener('load', () => {
 
 // Countdown timer functionality
 function initializeCountdown() {
-    const deadline = new Date('2025-07-18T23:59:00-08:00').getTime();
+    const deadline = new Date('2025-07-25T23:59:00-08:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
